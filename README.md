@@ -48,21 +48,40 @@ Proporciona una API RESTful segura para gestionar usuarios, perfiles y productos
 📁 backend/
 ├── controllers/
 │ ├── authController.js
-│ ├── productoController.js
+│ ├── carritoController.js
 │ ├── perfilController.js
 │ └── usuarioController.js
 ├── middlewares/
 │ ├── authMiddleware.js
-│ └── roleMiddleware.js
+│ └── corsMiddleware.js
+│ └── errorMiddleware.js
+│ └── productoMiddleware.js
 ├── models/
 │ ├── Usuario.js
 │ ├── Perfil.js
-│ └── Producto.js
+│ └── Carrito.js
+├── repositories/
+│ ├── genericRepository.js
+│ ├── productoRepository.js
 ├── routes/
 │ ├── authRoutes.js
-│ ├── productoRoutes.js
-│ ├── perfilRoutes.js
+│ ├── carritoRoutes.js
+│ ├── productRoutes.js
+│ └── usuarioRoutes.js
+├── services/
+│ ├── authService.js
+│ ├── carritoService.js
+│ ├── productoService.js
 │ └── usuarioRoutes.js
 ├── .env
-├── app.js
 └── server.js
+
+📦 Deploy en Render
+Este backend está desplegado en Render:
+
+🌐 https://tp-backend-bkfw.onrender.com
+
+## ✨ Créditos
+
+Proyecto desarrollado como parte de una aplicación de panadería full stack (frontend + backend), para la Diplomatura del Nodo Tecnologico de la Prov. de Catamarca.
+Por AGUSTINASC.
