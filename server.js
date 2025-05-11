@@ -22,12 +22,13 @@ connectDB()
 
 const app = express()
 
+
 /* Middlewares */
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }))
-/* const allowedOrigins = [
+//app.use(cors({ origin: 'http://localhost:5173', credentials: true }))
+ const allowedOrigins = [
     'http://localhost:5173',
     'https://tp-panaderia.netlify.app' // tu frontend en producción
-  ]; */
+  ]; 
   
   app.use(cors({
     origin: function (origin, callback) {
@@ -42,6 +43,11 @@ app.use(cors({ origin: 'http://localhost:5173', credentials: true }))
   
 
 app.use(express.json())
+
+app.get('/api', (req, res) => {
+  res.json({ mensaje: 'API funcionando correctamente 🎉' });
+});
+
 
 /* Rutas */
 app.use('/api/productos', productoRoutes)
