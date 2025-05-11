@@ -49,7 +49,9 @@ app.put('/api/productos/:id', verificarToken, actualizar, autorizarRol(['admin',
 /* Middleware de errores */
 app.use(manejarErrores)
 
-const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 5000;
+const PORT = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
 });
