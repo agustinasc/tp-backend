@@ -27,7 +27,8 @@ const app = express()
 //app.use(cors({ origin: 'http://localhost:5173', credentials: true }))
  const allowedOrigins = [
     'http://localhost:5173',
-    'https://tp-panaderia.netlify.app' // tu frontend en producción
+    'https://tp-panaderia.netlify.app',
+    'https://mathius.com.ar'
   ]; 
   
   app.use(cors({
